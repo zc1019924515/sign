@@ -1,0 +1,14 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/sign/sign",
+    "pages/share/share"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#FB7653",     
+    "navigationBarTitleText": "众保营销",
+    "navigationBarTextStyle":"light"
+  }
+}

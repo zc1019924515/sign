@@ -1,0 +1,15 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo" hover-start-time='100'>
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <!-- <button bindtap='showContack'>click me</button> -->
+   
+  <view class="container">
+  <button class=".button-start" open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="loginBz">点击开始</button>
+  </view>
+</view>

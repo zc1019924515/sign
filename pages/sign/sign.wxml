@@ -1,0 +1,53 @@
+<view class='container'>
+<!-- <view class='top-tab'>
+  <text class='banner'>{{title}}</text>
+</view> -->
+<button open-type='share'></button>
+<view class="top">
+     <view class="stars" >
+        <block wx:for="{{[1,2,3,4,5]}}" wx:for-item="i">
+        <button class='circle' wx:if="{{shareInfos.length >= i}}"><open-data type="groupName" open-gid="{{shareInfos[i-1].shareObj}}"></open-data>ok</button>
+        <button class='circle' wx:if="{{shareInfos.length < i}}"></button>
+        </block>
+     </view>
+     <view class="time">{{time}}</view>
+     <view>
+      <button data-statu="open" bindtap='beforeShare' class="sign-btn invalid" wx:if="{{status==0}}">签到</button>
+      <button data-statu="open" bindtap='afterShare' class="sign-btn valid" wx:if="{{status==1}}">签到</button>
+      <button data-statu="open" bindtap='tipFinish' class="sign-btn finish" wx:if="{{status==2}}">已签到</button> 
+     </view>
+</view>
+ 
+<view class='status'>
+     {{statusText}}
+   </view> 
+<view class="bottom">
+<view class='task-tip'>累计签到可得额外奖励</view>
+   <view class='task-view'>
+      <view class='task'>
+        <view class='title'>累计3天</view>
+        <button class='checkBtn'>领取</button>
+      </view>
+      <view class='task'>
+        <view class='title'>累计7天</view>
+        <button class='checkBtn'>领取</button>
+      </view>
+      <view class='task'>
+        <view class='title'>累计10天</view>
+        <button class='checkBtn'>领取</button>
+      </view>
+   </view>
+</view>
+<button class="footer">
+点击进入个人中心
+</button>
+<!--弹窗-->
+<view class="drawer_screen" bindtap="powerDrawer" data-statu="close" wx:if="{{showModalStatus}}"></view> 
+<view class='check-box' animation="{{animationData}}" wx:if="{{showModalStatus}}">
+  <view class="box-title"></view>
+  <view class="box-content">
+    打卡五个群可领取红包
+  </view>
+  <button open-type='share' bindtap='beforeShare' data-statu="close">打卡</button>
+</view>
+</view>

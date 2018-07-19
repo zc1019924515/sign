@@ -1,0 +1,186 @@
+progress{
+  width: 420rpx;
+  margin-left: 149rpx;
+  margin-top: 20rpx;
+  border: 1px solid #F5AB24;
+  border-radius: 5px;
+}
+.qiandaobg{
+  background: url("http://www.chbcar.com/yjzb/img/qdimg/bg.png") no-repeat;
+  background-size: 100%;}
+.img-title{width: 402rpx;height: 115rpx;}
+.main-detail{width: 718rpx;height:675rpx ;background: #ccc;margin-top: 21rpx;
+background: url("http://www.chbcar.com/yjzb/img/qdimg/bg-qd.png") no-repeat;background-size: 100% 100%;}
+.img-fn{width: 445rpx;height:64rpx;margin-top: 60rpx;}
+.top-tab{
+  width: 750rpx;
+  height: 100rpx;
+  align-content: center;
+  background: #fff;
+  color: #000;
+  font-size: 40rpx; 
+  line-height: 100rpx;
+  background: #e8e8e8;
+  /* box-shadow: 0 2px 2px #bebebe; */ 
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+  position: fixed; 
+  top: 0;
+  z-index: 9999;
+}
+.show-group{
+  width: 565rpx;
+  margin-top: 30rpx;
+  background: #F4A924;
+  margin-left: 77rpx;
+  border: 1px solid #F77400;
+  border-radius: 10rpx;
+  padding: 9rpx 0 9rpx 0;
+  overflow: hidden;
+}
+.show-group text{
+  font-size: 22rpx;
+  color: #EB6D2A;
+  width: 50rpx;
+  display: block;
+  float: left;
+  padding: 0 36rpx 0 34rpx;
+  border-right: 2px solid #EB6D2A;
+}
+.stars{
+  display: inline-flex;
+  flex-direction: row;
+  /*width: 80%;padding: 0 10%;*/
+}
+/**
+ *  群头像样式
+ */
+.circle{
+  margin-left: 54rpx;
+  width: 70rpx;
+  height: 70rpx;
+  border: 1px solid #ccc;
+  border-radius: 100%;
+  font-size: 50rpx;
+  line-height: 50rpx;
+  text-align: left;
+  padding: 0;
+}
+/**
+ * 未分享的群样式
+ */
+ .uncirclr{
+   background: url('https://www.chbcar.com/public/img/logo.png') no-repeat 100%; 
+ }
+.fnt{   
+    text-align: center; 
+}
+.fnt1{color: #ED3D2D;margin-top: 25rpx;}
+.fnt1 label{font-size: 100rpx;}
+.fnt2{color: #F5AB24;margin-top: 15rpx;}
+/**签到按钮*/
+.sign-btn{
+  margin-top:74rpx;
+  margin-bottom: 40rpx;
+  font-size: 36rpx;
+  color: #fff;
+}
+.invalid{
+  border:1px solid #EB6D2A;
+  background: #EB6D2A;
+  box-shadow:  0px 3px 2px RGBA(148, 48, 21, 0.74); 
+	-webkit-box-shadow:  0px 3px 2px RGBA(148, 48, 21, 0.74);
+  -moz-box-shadow:  0px 3px 2px RGBA(148, 48, 21, 0.74);
+}
+.valid{
+  border: 1px solid #ccc;
+  background: #E5717a;
+}
+.finish{
+  border: 1px solid #0ff;
+}
+.bottom{
+  margin-top: 30rpx;
+}
+.status{
+  width: 565rpx;
+  margin-top: 35rpx;
+  margin-left: 77rpx;
+  color: #EB6D2A;
+  font-family:PingFang-SC-Medium;
+}
+.status text{font-size: 26rpx;}
+.status label{font-size: 36rpx;}
+.task-tip{
+  font-size: 26rpx;
+  margin-left: 40rpx;
+  color:#ccc;
+}
+.task-view{
+  display: flex;
+  flex-direction: row;
+}
+.task{
+  margin-bottom: 40rpx;
+  margin-left: 25rpx;
+  margin-right: 25rpx;
+  width: 200rpx;
+  height: 240rpx;
+  font-size: 25rpx;
+  background: url('http://www.chbcar.com/yjzb/img/qdimg/bg-hb.png') no-repeat 100%;
+  background-size: 100% 100%;
+}
+.title{
+    height: 40rpx;
+    text-align: center;
+    color: #EB6D2A;
+    font-size: 26rpx;
+    margin-top: 17rpx;
+}
+.checkBtn{
+    width: 110rpx;
+    height: 36rpx;
+    font-size: 25rpx;
+    line-height: 35rpx;
+    border-radius: 20 rpx;
+    position:relative;
+    bottom: -110rpx;
+    
+}
+
+
+/** 弹窗 **/
+.check-box{
+  width: 350rpx; 
+ overflow: hidden; 
+ position: fixed; 
+ top: 45%; 
+ left: 0; 
+ z-index: 1001; 
+ background: #FAFAFA; 
+ margin: -150rpx 200rpx 0 200rpx; 
+ border-radius: 3px;
+}
+.box-title{
+ padding:15rpx; 
+ font-size: 24rpx;
+ text-align: center;
+}
+.box-content{
+  height: 150rpx;
+  font-size: 24rpx;
+  text-align: center;
+  overflow-y: scroll; /*超出父盒子高度可滚动*/
+}
+/*mask*/
+.drawer_screen { 
+ width: 100%; 
+ height: 100%; 
+ position: fixed; 
+ top: 0; 
+ left: 0; 
+ z-index: 1000; 
+ background: #000; 
+ opacity: 0.5; 
+ overflow: hidden; 
+}

@@ -1,0 +1,5 @@
+<view>分享该页至五个不同的群领取红包</view>
+<button open-type='share'>分享</button>
+<button bindtap='onBtnClick'>
+  animate弹窗
+</button>
