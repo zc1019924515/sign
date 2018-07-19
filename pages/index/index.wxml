@@ -15,50 +15,69 @@
   <image class='img-title' src='../../style/img/img-title.png'></image>
   <view class='main-detail'>
     <view class="top">
-      <view class='fnt fnt1'>￥<label>1.00</label></view>
-      <view class="fnt fnt2">{{time}}</view>
-      <progress percent="40" stroke-width="5" backgroundColor="RGBA(243, 159, 12, .1)" color='#F39F0C' />
-      <button data-statu="open" bindtap='beforeShare' class="btn-default sign-btn invalid" wx:if="{{status==0}}">签到</button>
+      <view class='fnt fnt1'>￥
+        <label>1.00</label>
+      </view>
+      <view class="fnt fnt2"><label class='style-time'>{{hour}}</label>时<label class='style-time'>{{minute}}</label>分<label class='style-time'>{{second}}</label>秒后过期</view>
+      <progress percent="33" stroke-width="5" backgroundColor="RGBA(243, 159, 12, .1)" color='#F39F0C' />
+      <view class='tips-default' >再分享2个群，就可以领红包啦！</view>
+      <button data-statu="open" bindtap='beforeShare' class="btn-default sign-btn invalid" wx:if="{{status==0}}">分享群得红包</button>
       <button data-statu="open" bindtap='afterShare' class="sign-btn valid" wx:if="{{status==1}}">签到</button>
       <button data-statu="open" bindtap='tipFinish' class="sign-btn finish" wx:if="{{status==2}}">已签到</button>
       <view class="show-group">
-        <text>已分享群</text>   
-        <view class="stars">
+        <text>已分享群</text>
+        <view class="stars"> 
           <block wx:for="{{[1,2,3]}}" wx:for-item="i">
+            <image wx:if="{{shareInfos.length >= i}}" class='circle' src='../../style/img/icon-qd2.png'></image>
+            <image wx:if="{{shareInfos.length < i}}" class='circle' src='../../style/img/icon-qd1.png'></image>    
+            <!--
             <button class='circle' wx:if="{{shareInfos.length >= i}}">
               <open-data type="groupName" open-gid="{{shareInfos[i-1].shareObj}}"></open-data>ok</button>
-            <button class='circle' wx:if="{{shareInfos.length < i}}"></button>
+            <button class='circle' wx:if="{{shareInfos.length < i}}"></button>-->           
           </block>
         </view>
       </view>
     </view>
     <view class='status'>
-      <text>已累计红包:</text><label>20.00</label><text style='float:right;'>签到日历</text>
+      <text>已累计红包:</text>
+      <label> 20.00</label>
+      <text style='float:right;'>签到日历</text>
     </view>
   </view>
   <image class='img-fn' src='http://www.chbcar.com/yjzb/img/qdimg/img-fn.png'></image>
 
-
-
-  <view class="bottom">
-    <view class='task-view'>
-      <view class='task'>
-        <view class='title'>累计3天</view>
-        <button class='checkBtn'>领取</button>
-      </view>
-      <view class='task'>
-        <view class='title'>累计7天</view>
-        <button class='checkBtn'>领取</button>
-      </view>
-      <view class='task'>
-        <view class='title'>累计10天</view>
-        <button class='checkBtn'>领取</button>
-      </view>
+  <scroll-view class='task-view' scroll-x="true" style="white-space: nowrap;width: 100%;">
+    <view class='task'>
+      <view class='title'>累计3天</view>
+      <view class='lj-honbao lj-color1'>￥<label>5.00</label></view>
+      <view class='honbao-icon lj-color1'>——</view>
+      <view class='lj-color1 honbao-text'>现金红包可提现</view>
+      <button class='checkBtn1 btn-default-small-hidden'>领取</button>
     </view>
-  </view>
-  <button class='btn-top'>
-    个人中心
-  </button>
+    <view class='task'>
+      <view class='title'>累计5天</view>
+      <view class='lj-honbao lj-color2'>￥<label>10.00</label></view>
+      <view class='honbao-icon lj-color3'>——</view>
+      <view class='lj-color4 honbao-text'>现金红包可提现</view>
+      <button class='checkBtn2 btn-default-small-hidden'>领取</button>
+    </view>
+    <view class='task'>
+      <view class='title'>累计15天</view>
+      <view class='lj-honbao lj-color1'>￥<label>30.00</label></view>
+      <view class='honbao-icon lj-color1'>——</view>
+      <view class='lj-color1 honbao-text'>现金红包可提现</view>
+      <button class='checkBtn1 btn-default-small-hidden'>领取</button>
+    </view>
+    <view class='task'>
+      <view class='title'>累计3天</view>
+      <view class='lj-honbao lj-color1'>￥<label>5.00</label></view>
+      <view class='honbao-icon lj-color1'>——</view>
+      <view class='lj-color1 honbao-text'>现金红包可提现</view>
+      <button class='checkBtn1 btn-default-small-hidden'>领取</button>
+    </view>
+  </scroll-view>
+  <input type='button' class='btn-top' value='个人中心' disabled="true"> 
+  </input>
   <!--弹窗-->
   <view class="drawer_screen" bindtap="powerDrawer" data-statu="close" wx:if="{{showModalStatus}}"></view>
   <view class='check-box' animation="{{animationData}}" wx:if="{{showModalStatus}}">

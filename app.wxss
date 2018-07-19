@@ -22,6 +22,7 @@
   border-bottom-right-radius: 0rpx;
   border-top-right-radius: 0rpx;
   margin-top:20rpx; 
+  text-align: center;
 }
 /**默认按钮**/
 .btn-default{
@@ -29,4 +30,22 @@
   height: 100rpx;
   vertical-align: center;
   border-radius: 50rpx;
+}
+.btn-default-small-hidden{
+  line-height: 35rpx;
+  width: 120rpx;
+  height: 36rpx;
+  vertical-align: center;
+  border-radius: 18rpx;
+  font-size: 22rpx;
+}
+/**提示框**/
+.tips-default{
+  height: 22rpx;
+  color: #EB6D2A;
+  font-size: 20rpx;
+  font-family: 'PingFang-SC-Medium';
+  line-height: 22rpx;
+  text-align: center;
+  margin: 19rpx;
 }

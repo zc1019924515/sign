@@ -11,7 +11,10 @@ Page({
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     title: "众保营销小程序",
     showtime: true,
-    time: '',
+    //time: '',
+    hour:0,
+    minute:0,
+    second:0,
     status: 0,
     //statusText: '您本月还没开始签到。',
     shareInfos: [],
@@ -185,30 +188,21 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
+    let date; 
     this.timer = setInterval(function () {
-      this.setData({ time: util.formatTime(new Date()) });
-    }.bind(this), 1000);
+      date = new Date();
+      this.setData({
+        hour: 24 - date.getHours() - 1, 
+        minute: 60 - date.getMinutes(),   
+        second: 60 - date.getSeconds() 
+      });
+      //this.setData({ time: util.formatTime(new Date()) });
+    }.bind(this), 1000);   
   },
   /**
    * 签到前提醒
    */
   beforeShare: function (res) {
-    //内部提醒样式
-    // wx.showModal({
-    //   title: '打卡领红包',
-    //   content: '将'+this.data.title+'分享至五个群才可以签到哦',
-    //   confirmText: "去去就来",
-    //   cancelText: "残忍拒绝",
-    //   success: function (res) {
-    //     console.log(res);
-    //     if (res.confirm) {
-
-    //     } else {
-
-    //     }
-    //   }
-    // })
-
     var btnStatus = res.currentTarget.dataset.statu;
     this.diaLog(btnStatus);
   },

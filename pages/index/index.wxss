@@ -11,7 +11,7 @@ progress{
 .img-title{width: 402rpx;height: 115rpx;}
 .main-detail{width: 718rpx;height:675rpx ;background: #ccc;margin-top: 21rpx;
 background: url("http://www.chbcar.com/yjzb/img/qdimg/bg-qd.png") no-repeat;background-size: 100% 100%;}
-.img-fn{width: 445rpx;height:64rpx;margin-top: 60rpx;}
+.img-fn{width: 445rpx;height:64rpx;margin-top: 35rpx;}
 .top-tab{
   width: 750rpx;
   height: 100rpx;
@@ -29,6 +29,7 @@ background: url("http://www.chbcar.com/yjzb/img/qdimg/bg-qd.png") no-repeat;back
   z-index: 9999;
 }
 .show-group{
+  font-family: 'PingFang-SC-Medium';
   width: 565rpx;
   margin-top: 30rpx;
   background: #F4A924;
@@ -59,12 +60,11 @@ background: url("http://www.chbcar.com/yjzb/img/qdimg/bg-qd.png") no-repeat;back
   margin-left: 54rpx;
   width: 70rpx;
   height: 70rpx;
-  border: 1px solid #ccc;
-  border-radius: 100%;
+  /*
   font-size: 50rpx;
   line-height: 50rpx;
   text-align: left;
-  padding: 0;
+  */
 }
 /**
  * 未分享的群样式
@@ -74,23 +74,27 @@ background: url("http://www.chbcar.com/yjzb/img/qdimg/bg-qd.png") no-repeat;back
  }
 .fnt{   
     text-align: center; 
+    font-family: 'PingFang SC';
 }
-.fnt1{color: #ED3D2D;margin-top: 25rpx;}
+.fnt1{color: #ED3D2D;margin-top: 46rpx;line-height: 75rpx;}
 .fnt1 label{font-size: 100rpx;}
-.fnt2{color: #F5AB24;margin-top: 15rpx;}
+.fnt2{color: #F5AB24;line-height: 50rpx;margin-top: 30rpx;}
+/*时间样式*/
+.style-time{display: inline-block;border-radius: 10rpx;margin: 0 8rpx 0 8rpx;color: #fff;background: #F39F0C;width: 50rpx;height: 50rpx}
 /**签到按钮*/
 .sign-btn{
-  margin-top:74rpx;
+  margin-top:15rpx;
   margin-bottom: 40rpx;
   font-size: 36rpx;
   color: #fff;
+  font-family: 'PingFang-SC-Heavy';
 }
 .invalid{
   border:1px solid #EB6D2A;
   background: #EB6D2A;
-  box-shadow:  0px 3px 2px RGBA(148, 48, 21, 0.74); 
-	-webkit-box-shadow:  0px 3px 2px RGBA(148, 48, 21, 0.74);
-  -moz-box-shadow:  0px 3px 2px RGBA(148, 48, 21, 0.74);
+  box-shadow:  0px 3rpx 2rpx RGBA(148, 48, 21, 0.74); 
+	-webkit-box-shadow:  0px 3rpx 2rpx RGBA(148, 48, 21, 0.74);
+  -moz-box-shadow:  0px 3rpx 2rpx RGBA(148, 48, 21, 0.74);
 }
 .valid{
   border: 1px solid #ccc;
@@ -107,7 +111,7 @@ background: url("http://www.chbcar.com/yjzb/img/qdimg/bg-qd.png") no-repeat;back
   margin-top: 35rpx;
   margin-left: 77rpx;
   color: #EB6D2A;
-  font-family:PingFang-SC-Medium;
+  font-family:'PingFang-SC-Medium';
 }
 .status text{font-size: 26rpx;}
 .status label{font-size: 36rpx;}
@@ -119,9 +123,10 @@ background: url("http://www.chbcar.com/yjzb/img/qdimg/bg-qd.png") no-repeat;back
 .task-view{
   display: flex;
   flex-direction: row;
+  margin-bottom: 40rpx;
+  margin-top: 27rpx;
 }
 .task{
-  margin-bottom: 40rpx;
   margin-left: 25rpx;
   margin-right: 25rpx;
   width: 200rpx;
@@ -129,25 +134,45 @@ background: url("http://www.chbcar.com/yjzb/img/qdimg/bg-qd.png") no-repeat;back
   font-size: 25rpx;
   background: url('http://www.chbcar.com/yjzb/img/qdimg/bg-hb.png') no-repeat 100%;
   background-size: 100% 100%;
+  display: inline-block;
+  text-align: center;
 }
 .title{
     height: 40rpx;
-    text-align: center;
     color: #EB6D2A;
     font-size: 26rpx;
     margin-top: 17rpx;
+    font-family: 'PingFang-SC-Bold';
 }
-.checkBtn{
-    width: 110rpx;
-    height: 36rpx;
-    font-size: 25rpx;
-    line-height: 35rpx;
-    border-radius: 20 rpx;
-    position:relative;
-    bottom: -110rpx;
-    
+.lj-honbao{
+  font-family: 'PingFang SC';
+  font-size: 22rpx;
+  margin-top: 20rpx;
+  line-height: 31rpx;
 }
-
+.lj-color1{color: #EBEBEB;}
+.lj-color2{color: #ED3D2D;}
+.lj-color3{color: #F9CC86;}
+.lj-color4{color: #FBD69D;}
+.lj-honbao label{
+  font-size: 40rpx;
+}
+.honbao-icon{line-height: 5rpx;margin-top: 10rpx;}
+.honbao-text{font-size: 16rpx;margin-top: 8rpx;}
+.checkBtn1{ 
+    border: 1px solid #EBEBEB;
+    margin-top: 25rpx;
+    background: #EBEBEB;
+    font-family: 'PingFang-SC-Medium';
+    color: #fff;
+}
+.checkBtn2{
+    border: 1px solid #EB6D2A;
+    margin-top: 25rpx;
+    background: #EB6D2A;
+    font-family: 'PingFang-SC-Medium';
+    color: #fff;
+}
 
 /** 弹窗 **/
 .check-box{
