@@ -76,8 +76,8 @@
       <button class='checkBtn1 btn-default-small-hidden'>领取</button>
     </view>
   </scroll-view>
-  <input type='button' class='btn-top' value='个人中心' disabled="true"> 
-  </input>
+  <input type='button' class='btn-top btn-top1' value='个人中心' disabled="true"></input>
+  <input type='button' class='btn-top btn-top2' value='规则' disabled="true"></input>
   <!--弹窗-->
   <view class="drawer_screen" bindtap="powerDrawer" data-statu="close" wx:if="{{showModalStatus}}"></view>
   <view class='check-box' animation="{{animationData}}" wx:if="{{showModalStatus}}">

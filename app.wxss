@@ -13,17 +13,20 @@
   position: absolute;
   right: 0rpx;
   background: RGBA(251, 118, 83, 0.5);
-  height: 55rpx;
-  width: 149rpx;
+  height: 50rpx;
   color: #fff;
   font-size: 23rpx;
   border-bottom-left-radius: 25rpx;
   border-top-left-radius: 25rpx;
   border-bottom-right-radius: 0rpx;
   border-top-right-radius: 0rpx;
-  margin-top:20rpx; 
   text-align: center;
+  box-shadow:  0px 2rpx 1rpx RGBA(148, 48, 21, 1); 
+	-webkit-box-shadow:  0px 2rpx 1rpx RGBA(148, 48, 21, 1);
+  -moz-box-shadow:  0px 2rpx 1rpx RGBA(148, 48, 21, 1);
 }
+.btn-top1{margin-top:20rpx; width: 149rpx;}
+.btn-top2{margin-top:80rpx; width: 100rpx;}
 /**默认按钮**/
 .btn-default{
   width: 500rpx;
